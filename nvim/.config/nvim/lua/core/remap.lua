@@ -27,8 +27,13 @@ vim.keymap.set("n", "<leader>h", "<cmd>noh<CR>", { desc = "No highights" });
 
 vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
+FormatBuffer = function ()
+  vim.lsp.buf.format({
+    timeout_ms = 2000
+  })
+end
 -- vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
-vim.keymap.set("n", "<leader>f", vim.lsp.buf.format, { desc = "Format document" })
+vim.keymap.set("n", "<leader>f", FormatBuffer, { desc = "Format document" })
 vim.keymap.set("n", "<leader>ca", function() vim.lsp.buf.code_action() end, { desc = "[C]ode [A]ction"})
 
 -- vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")

@@ -60,7 +60,23 @@ local servers = {
   gopls = {},
   -- pyright = {},
   -- rust_analyzer = {},
-  tsserver = {},
+  tsserver = {
+    format = { enable = false }
+  },
+
+  eslint = {
+    enable = true,
+    format = { enable = true }, -- this will enable formatting
+    packageManager = "npm",
+    autoFixOnSave = true,
+    codeActionsOnSave = {
+      mode = "all",
+      rules = { "!debugger", "!no-only-tests/*" },
+    },
+    lintTask = {
+      enable = true,
+    },
+  },
   lua_ls = {
     Lua = {
       workspace = { checkThirdParty = false },
