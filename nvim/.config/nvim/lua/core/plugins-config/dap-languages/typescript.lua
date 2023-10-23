@@ -28,6 +28,15 @@ for _, language in ipairs(languages) do
     {
       type = 'pwa-node',
       request = 'launch',
+      name = 'Launch Current File Node + TypeScript',
+      cwd = vim.fn.getcwd(),
+      program = '${workspaceFolder}/src/app.ts',
+      preLaunchTask = "tsc: build - tsconfig.json",
+      sourceMaps = true
+    },
+    {
+      type = 'pwa-node',
+      request = 'launch',
       name = 'Launch Current File (pwa-node with ts-node)',
       cwd = vim.fn.getcwd(),
       runtimeArgs = { '--loader', 'ts-node/esm' },

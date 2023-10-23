@@ -25,6 +25,7 @@ alias reloadrc='source ~/.bashrc'
 alias copy='rsync -avh --progress'
 alias vimconf='cd ~/.config/nvim && nvim .'
 alias touchpad="~/scripts/touchpad-toggle.sh"
+alias keys="~/scripts/toggle-internal-kb.sh"
 alias vi="vim"
 alias blue="bluetoothctl connect E8:07:BF:89:A5:97"
 
