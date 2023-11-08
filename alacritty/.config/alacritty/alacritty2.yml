@@ -1,0 +1,45 @@
+window:
+  padding:
+    x: 5
+    y: 5
+  class:
+    instance: Alacritty
+    general: Alacritty
+
+scrolling:
+  history: 100
+  multiplier: 3
+
+font:
+  normal:
+    family: Caskaydia Cove Nerd Font
+    style: Regular
+  bold:
+    family: Caskaydia Cove Nerd Font
+    style: Bold
+  italic:
+    family: Caskaydia Cove Nerd Font
+    style: Italic
+  bold_italic:
+    family: Caskaydia Cove Nerd Font
+    style: Bold Italic
+  size: 7.5
+  offset:
+    x: 0
+    y: 0
+  # glyph-offset:
+  #   x: 1
+  #   y: 1
+
+draw_bold_text_with_bright_colors: true
+
+import:
+  - ~/.config/alacritty/remedy-dark.yml
+
+background_opacity: 0.6
+
+selection:
+  save_to_clipboard: false
+
+key_bindings:
+  - { key: Return, mods: Super|Shift, action: SpawnNewInstance }

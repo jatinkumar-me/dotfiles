@@ -4,6 +4,7 @@
 set -o vi
 bind -m vi-command 'Control-l: clear-screen'
 bind -m vi-insert 'Control-l: clear-screen'
+bind -m vi-insert 'Control-e: alias-expand-line'
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
@@ -16,7 +17,7 @@ PS1='[\u@\h \W]\$ '
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
-alias bashconf='nvim .bashrc'
+alias bashconf='nvim ~/.bashrc'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ll='ls -lah'
@@ -28,6 +29,25 @@ alias touchpad="~/scripts/touchpad-toggle.sh"
 alias keys="~/scripts/toggle-internal-kb.sh"
 alias vi="vim"
 alias blue="bluetoothctl connect E8:07:BF:89:A5:97"
+alias remote-android="ssh -p 8022 user@192.168.29.170"
+alias sync-photos="pull-android-sync storage/dcim/Camera Files/Pictures/"
+alias utube='ytfzf -t'
+
+push-android-sync() {
+    rsync -P -arv -e 'ssh -p 8022' $1 user@$3:$2
+}
+
+push-remote-sync() {
+    rsync -P -arv $1
+}
+
+pull-remote-sync() {
+    rsync -P -arv $1
+}
+
+pull-android-sync() {
+    rsync -P -arv -e 'ssh -p 8022' user@$3:$1 $2
+}
 
 mkcd() {
     mkdir -p "$1" && cd "$1"
