@@ -19,7 +19,6 @@ $hg_branch\
 $pijul_channel\
 $docker_context\
 $package\
- $fill \
 $c\
 $cmake\
 $cobol\
@@ -97,7 +96,7 @@ ssh_symbol = " "
 
 [time]
 format = '[$time]($style) '
-disabled = false
+disabled = true 
 style = "white"
 # use_12hr = true
 time_format = '󰃰 %a, %I:%M %P'
