@@ -37,6 +37,14 @@ push-android-sync() {
     rsync -P -arv -e 'ssh -p 8022' $1 user@$3:$2
 }
 
+push-remote-sync() {
+    rsync -P -arv $1
+}
+
+pull-remote-sync() {
+    rsync -P -arv $1
+}
+
 pull-android-sync() {
     rsync -P -arv -e 'ssh -p 8022' user@$3:$1 $2
 }
