@@ -63,7 +63,6 @@ local servers = {
   tsserver = {
     format = { enable = false }
   },
-
   eslint = {
     enable = true,
     format = { enable = true }, -- this will enable formatting
@@ -83,6 +82,7 @@ local servers = {
       telemetry = { enable = false },
     },
   },
+  texlab = {},
 }
 
 -- Setup neovim lua configuration
