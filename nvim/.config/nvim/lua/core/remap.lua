@@ -85,3 +85,5 @@ vim.keymap.set('n', '<leader>k', [[<Cmd>IlluminateToggle<CR>]], { desc = "Disabl
 vim.keymap.set('n', '<leader>n', [[<Cmd>lua require('illuminate').goto_next_reference()<CR>]], { desc = "Go to next reference"})
 -- Go to previous reference
 vim.keymap.set('n', '<leader>N', [[<Cmd>lua require('illuminate').goto_prev_reference()<CR>]], { desc = "Go to previous reference"})
+
+vim.keymap.set('t', '<C-\\>', '<C-\\><C-n>')
