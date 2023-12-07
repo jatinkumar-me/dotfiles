@@ -64,7 +64,7 @@ vim.keymap.set('n', '<C-k>', '<C-w>k')
 HandleURL = function()
   local url = string.match(vim.fn.getline("."), "[a-z]*://[^ >,;]*")
   if url ~= "" then
-    vim.cmd('exec "!xdg-open \'' .. url .. '\'"')
+    vim.cmd('exec "!open \'' .. url .. '\'"')
   else
     vim.cmd('echo "No URI found in line."')
   end
