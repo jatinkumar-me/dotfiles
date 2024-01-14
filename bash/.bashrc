@@ -79,6 +79,15 @@ diskusage() {
     du -cha --max-depth=1 "$directory" | grep -P '\d[MG]'
 }
 
+open() {
+    FILE_NAME="$1"
+    if [ ! -f "$FILE_NAME" ]; then
+        echo "File doesn't exist"
+        return 1
+    fi
+    xdg-open "$FILE_NAME" & disown
+}
+
 #
 # PROMPT =============================================================
 #

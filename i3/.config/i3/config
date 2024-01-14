@@ -250,9 +250,6 @@ exec_always --no-startup-id feh --bg-scale /media/Files/Pictures/Wallpaper/Natur
 # Power Menu Rofi
 bindsym $alt+shift+e exec $HOME/.config/i3/power-menu.sh
 
-# Scratchpad
-# bindsym $mod+
-
 # MPC KEYBOARD CONTROL
 bindsym XF86_AudioPlay exec --no-startup-id mpc toggle
 bindsym XF86_AudioStop exec --no-startup-id mpc stop
