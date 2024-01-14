@@ -60,9 +60,6 @@ local servers = {
   gopls = {},
   -- pyright = {},
   -- rust_analyzer = {},
-  tsserver = {
-    format = { enable = false }
-  },
   eslint = {
     enable = true,
     format = { enable = true }, -- this will enable formatting
