@@ -3,7 +3,10 @@ vim.g.loaded_netrwPlugin = 1
 
 require("nvim-tree").setup({
   view = {
-    adaptive_size = true
+    width = {
+      min = 10,
+      max = 30
+    }
   },
   update_cwd = true,
   update_focused_file = {
