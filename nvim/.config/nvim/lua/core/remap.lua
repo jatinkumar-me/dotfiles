@@ -87,6 +87,9 @@ vim.keymap.set('n', '<leader>n', [[<Cmd>lua require('illuminate').goto_next_refe
 vim.keymap.set('n', '<leader>N', [[<Cmd>lua require('illuminate').goto_prev_reference()<CR>]], { desc = "Go to previous reference"})
 
 vim.keymap.set('t', '<C-\\>', '<C-\\><C-n>')
+vim.keymap.set('t', '<A-h>', '<C-\\><C-n><C-w>h')
+vim.keymap.set('t', '<A-l>', '<C-\\><C-n><C-w>l')
+
 -- Opens an existing terminal window in a horizontal split.
 -- Creates a new one if it doesn't exists
 function OpenTerminalBuffer()
