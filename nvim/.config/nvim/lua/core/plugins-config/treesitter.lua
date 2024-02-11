@@ -20,6 +20,13 @@ require('nvim-treesitter.configs').setup {
       node_decremental = '<M-space>',
     },
   },
+  tree_docs = {
+    enable = true,
+    keymaps = {
+      doc_node_at_cursor = 'tdd',
+      doc_all_in_range = 'tdr',
+    }
+  },
   textobjects = {
     select = {
       enable = true,
