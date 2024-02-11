@@ -87,3 +87,29 @@ vim.keymap.set('n', '<leader>n', [[<Cmd>lua require('illuminate').goto_next_refe
 vim.keymap.set('n', '<leader>N', [[<Cmd>lua require('illuminate').goto_prev_reference()<CR>]], { desc = "Go to previous reference"})
 
 vim.keymap.set('t', '<C-\\>', '<C-\\><C-n>')
+-- Opens an existing terminal window in a horizontal split.
+-- Creates a new one if it doesn't exists
+function OpenTerminalBuffer()
+  local terminal_bufnr = nil
+  for _, bufnr in ipairs(vim.api.nvim_list_bufs()) do
+    if vim.api.nvim_buf_get_option(bufnr, 'buftype') == 'terminal' then
+      terminal_bufnr = bufnr
+      break
+    end
+  end
+
+  -- Check if there's an existing terminal buffer
+  if terminal_bufnr ~= nil then
+    -- Open the existing terminal buffer in a new split window below the current buffer
+    vim.api.nvim_command('belowright sb' .. terminal_bufnr)     -- Adjust the width as needed
+  else
+    -- Create a new terminal buffer
+    vim.api.nvim_command('belowright new sb')     -- Adjust the width as needed
+    vim.fn.termopen('bash')
+  end
+end
+
+-- Open a horizontal split terminal
+-- vim.keymap.set('n', 'tT', [[<Cmd>belowright sb term<CR>]], { desc = "Open a terminal in a horizontal split below the current buffer"})
+vim.keymap.set('n', 'to', [[<Cmd>lua OpenTerminalBuffer()<CR>]],
+{ desc = "Open a terminal in a horizontal split below the current buffer" })
