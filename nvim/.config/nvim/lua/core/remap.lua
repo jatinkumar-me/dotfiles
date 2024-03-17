@@ -59,6 +59,7 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = "Open diagn
 -- vim.keymap.set('n', '<A-l>', '<C-w>l')
 -- vim.keymap.set('n', '<A-j>', '<C-w>j')
 -- vim.keymap.set('n', '<A-k>', '<C-w>k')
+vim.keymap.set('n', '<C-q>', '<C-w>q')
 
 -- Open up a link in the browser
 HandleURL = function()
@@ -89,6 +90,7 @@ vim.keymap.set('n', '<leader>N', [[<Cmd>lua require('illuminate').goto_prev_refe
 { desc = "Go to previous reference" })
 
 vim.keymap.set('t', '<C-\\>', '<C-\\><C-n>')
+vim.keymap.set('t', '<C-q>', '<C-\\><C-n><C-w>q')
 vim.keymap.set('t', '<A-h>', '<C-\\><C-n><C-w>h')
 vim.keymap.set('t', '<A-l>', '<C-\\><C-n><C-w>l')
 
