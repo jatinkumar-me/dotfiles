@@ -118,5 +118,5 @@ end
 
 -- Open a horizontal split terminal
 -- vim.keymap.set('n', 'tT', [[<Cmd>belowright sb term<CR>]], { desc = "Open a terminal in a horizontal split below the current buffer"})
-vim.keymap.set('n', 'to', [[<Cmd>lua OpenTerminalBuffer()<CR>]],
+vim.keymap.set('n', 'to', [[<Cmd>lua OpenTerminalBuffer()<CR>a]],
 { desc = "Open a terminal in a horizontal split below the current buffer" })
