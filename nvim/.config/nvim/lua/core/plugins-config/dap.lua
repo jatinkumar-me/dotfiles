@@ -101,6 +101,7 @@ buf_map('n', '<Leader>dw]', ':lua require(\'dapui\').toggle(2)<CR>')
 
 -- DAP Config
 require('core.plugins-config.dap-languages.typescript')
+require('core.plugins-config.dap-languages.go')
 
 -- -- DAP `launch.json`
 -- require('dap.ext.vscode').load_launchjs(nil, {
