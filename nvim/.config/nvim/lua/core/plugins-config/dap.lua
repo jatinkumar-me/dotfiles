@@ -85,10 +85,10 @@ local buf_map = function(mode, lhs, rhs, opts)
   })
 end
 
-buf_map('n', '<Leader>di', ':lua require(\'dap\').toggle_breakpoint()<CR>')
-buf_map('n', '<Leader>dI', ':lua require(\'dap\').set_breakpoint(vim.fn.input(\'Breakpoint condition: \'))<CR>')
+buf_map('n', '<Leader>db', ':lua require(\'dap\').toggle_breakpoint()<CR>')
+buf_map('n', '<Leader>dB', ':lua require(\'dap\').set_breakpoint(vim.fn.input(\'Breakpoint condition: \'))<CR>')
 buf_map('n', '<Leader>dp', ':lua require(\'dap\').set_breakpoint(nil, nil, vim.fn.input(\'Log point message: \'))<CR>')
-buf_map('n', '<Leader>ds', ':lua require(\'dap\').continue()<CR>')
+buf_map('n', '<Leader>dc', ':lua require(\'dap\').continue()<CR>')
 buf_map('n', '<Leader>dl', ':lua require(\'dap\').run_to_cursor()<CR>')
 buf_map('n', '<Leader>dS', ':lua require(\'dap\').disconnect()<CR>')
 buf_map('n', '<Leader>dn', ':lua require(\'dap\').step_over()<CR>')
