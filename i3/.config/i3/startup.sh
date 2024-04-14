@@ -12,7 +12,7 @@ xinput set-prop 'USB Optical Mouse' 'libinput Accel Profile Enabled' 0, 1
 xrandr --output eDP --set TearFree on
 
 # Set wallpaper
-feh --bg-scale /media/Files/Pictures/Wallpaper/Nature/vincentiu-solomon-Z4wF0h47fy8-unsplash.jpg
+feh --bg-scale /home/jatin/.config/i3/wallpaper.jpg
 # killall xwinwrap
 # xwinwrap -g 1366x768 -ov -ni -s -nf -- gifview -w WID /home/jatin/Downloads/birdcity.gif -a --no-interactive
 #
