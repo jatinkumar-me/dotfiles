@@ -11,6 +11,9 @@ xinput set-prop 'USB Optical Mouse' 'libinput Accel Profile Enabled' 0, 1
 # Fixing screen tear
 xrandr --output eDP --set TearFree on
 
+#Secondary monitor
+xrandr --output HDMI-A-0 --auto --left-of eDP
+
 # Set wallpaper
 feh --bg-scale /home/jatin/.config/i3/wallpaper.jpg
 # killall xwinwrap
