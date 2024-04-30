@@ -88,6 +88,10 @@ open() {
     xdg-open "$FILE_NAME" & disown
 }
 
+browsr() {
+    chromium --new-window --app=$1
+}
+
 #
 # PROMPT =============================================================
 #
