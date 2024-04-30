@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Set color temperature
-redshift -P -O 2800
+redshift -P -O 3200
 
 # Disable touchpad, change mouse sensitivity
 xinput disable 'Elan Touchpad'
@@ -13,6 +13,7 @@ xrandr --output eDP --set TearFree on
 
 #Secondary monitor
 xrandr --output HDMI-A-0 --auto --left-of eDP
+# xrandr --output --rate 75
 
 # Set wallpaper
 feh --bg-scale /home/jatin/.config/i3/wallpaper.jpg
