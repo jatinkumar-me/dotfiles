@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Set color temperature
-redshift -P -O 3200
+redshift -P -O 3400
 
 # Disable touchpad, change mouse sensitivity
 xinput disable 'Elan Touchpad'
