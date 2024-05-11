@@ -305,6 +305,7 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
 # Power Menu Rofi
 bindsym $alt+shift+e exec $HOME/.config/i3/power-menu.sh
+bindsym $mod+shift+f exec $HOME/scripts/rofi-nerdfonts/rofi-nf.sh
 
 # MPC KEYBOARD CONTROL
 bindsym XF86_AudioPlay exec --no-startup-id mpc toggle
