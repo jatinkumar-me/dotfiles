@@ -63,9 +63,9 @@ default_floating_border pixel 2
 
 # start a terminal
 for_window [instance="floating"] floating enabled
-for_window [instance="floating"] resize set 480 280
-for_window [instance="floating"] move right 600
-for_window [instance="floating"] move down 380
+for_window [instance="floating"] resize set 600 380
+for_window [instance="floating"] move right 400
+for_window [instance="floating"] move down 280
 
 bindsym $mod+Return exec --no-startup-id alacritty
 bindsym $mod+Shift+Return exec --no-startup-id $HOME/.config/i3/same-directory-terminal.sh
