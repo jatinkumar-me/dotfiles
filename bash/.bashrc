@@ -29,7 +29,7 @@ alias touchpad="~/scripts/touchpad-toggle.sh"
 alias keys="~/scripts/toggle-internal-kb.sh"
 alias vi="vim"
 alias blue="bluetoothctl connect E8:07:BF:89:A5:97"
-alias remote-android="ssh -p 8022 user@192.168.29.170"
+alias remote-android="ssh -p 8022 user@192.168.37.88"
 alias sync-photos="pull-android-sync storage/dcim/Camera Files/Pictures/"
 alias utube='ytfzf -t'
 
