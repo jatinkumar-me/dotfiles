@@ -44,8 +44,13 @@ require('lazy').setup({
       'folke/neodev.nvim',
     },
   },
+
+  -- Supports automatic installation of supporting tools
+  'WhoIsSethDaniel/mason-tool-installer.nvim',
+
   -- null-ls
   'jose-elias-alvarez/null-ls.nvim',
+  'mfussenegger/nvim-jdtls',
 
   {
     -- Autocompletion
