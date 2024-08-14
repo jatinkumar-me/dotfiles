@@ -75,7 +75,8 @@ require('lazy').setup({
     },
   },
 
-  'navarasu/onedark.nvim',
+  -- 'navarasu/onedark.nvim',
+  "rebelot/kanagawa.nvim",
 
   -- Autopair and autotag plugins
   'windwp/nvim-autopairs',
