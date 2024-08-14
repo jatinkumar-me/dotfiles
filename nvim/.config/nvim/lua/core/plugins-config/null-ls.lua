@@ -6,13 +6,14 @@ null_ls.setup({
     -- javascript/typescript
     -- null_ls.builtins.formatting.prettier,
     -- null_ls.builtins.diagnostics.eslint,
+    null_ls.builtins.diagnostics.vale,
     null_ls.builtins.formatting.eslint,
     -- golang
     null_ls.builtins.formatting.gofumpt,
     null_ls.builtins.formatting.goimports_reviser,
     null_ls.builtins.formatting.golines,
     null_ls.builtins.formatting.latexindent,
-    null_ls.builtins.formatting.beautysh
+    null_ls.builtins.formatting.beautysh,
   },
   --[[ on_attach = function(client, bufnr)
     if client.supports_method("textDocument/formatting") then
