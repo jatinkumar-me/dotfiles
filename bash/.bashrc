@@ -27,9 +27,10 @@ alias copy='rsync -avh --progress'
 alias vimconf='cd ~/.config/nvim && nvim .'
 alias touchpad="~/scripts/touchpad-toggle.sh"
 alias keys="~/scripts/toggle-internal-kb.sh"
+alias create-spring="~/scripts/create-spring.sh"
 alias vi="vim"
 alias blue="bluetoothctl connect E8:07:BF:89:A5:97"
-alias remote-android="ssh -p 8022 user@192.168.37.88"
+alias remote-android="ssh -p 8022 user@192.168.38.207"
 alias sync-photos="pull-android-sync storage/dcim/Camera Files/Pictures/"
 alias utube='ytfzf -t'
 alias yt-music='yt-dlp -x --embed-thumbnail --audio-format mp3'
@@ -76,7 +77,7 @@ diskusage() {
     fi
 
     local directory="$1"
-    
+
     du -cha --max-depth=1 "$directory" | grep -P '\d[MG]'
 }
 
