@@ -4,7 +4,7 @@
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
-export EDITOR=vim
+export EDITOR=nvim
 
 export PATH="$PATH:$HOME/go/bin"
 
