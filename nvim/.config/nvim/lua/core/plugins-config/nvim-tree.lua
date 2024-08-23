@@ -1,5 +1,6 @@
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
+vim.g.nvim_tree_group_empty = 1
 
 require("nvim-tree").setup({
   view = {
@@ -20,6 +21,9 @@ require("nvim-tree").setup({
     show_on_dirs = true,
     show_on_open_dirs = false,
   },
+  renderer = {
+    group_empty = true,
+  }
 })
 
 vim.keymap.set('n', '<c-n>', ':NvimTreeFindFileToggle<CR>')
