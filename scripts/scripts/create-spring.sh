@@ -28,6 +28,7 @@ while [[ "$#" -gt 0 ]]; do
     shift
 done
 
+artifact="$name"
 package_name="$group.$name"
 extract_dir="./$name"
 
