@@ -10,7 +10,7 @@ local bundles = {
 
 -- Needed for running/debugging unit tests
 vim.list_extend(bundles,
-vim.split(vim.fn.glob(vim.env.HOME .. "/.local/share/nvim/mason/share/java-test/*.jar", true), "\n"))
+  vim.split(vim.fn.glob(vim.env.HOME .. "/.local/share/nvim/mason/share/java-test/*.jar", true), "\n"))
 
 -- See `:help vim.lsp.start_client` for an overview of the supported `config` options.
 local config = {
@@ -32,14 +32,14 @@ local config = {
     -- Eclipse jdtls location
     '-jar',
     vim.env.HOME ..
-    '/.local/share/nvim/mason/share/jdtls/plugins/org.eclipse.equinox.launcher_1.6.400.v20210924-0641.jar',
+    '/.local/share/nvim/mason/share/jdtls/plugins/org.eclipse.equinox.launcher_1.6.900.v20240613-2009.jar',
     -- TODO Update this to point to the correct jdtls subdirectory for your OS (config_linux, config_mac, config_win, etc)
     '-configuration', vim.env.HOME .. '/.local/share/nvim/mason/packages/jdtls/config_linux',
     '-data', workspace_dir
   },
   -- This is the default if not provided, you can remove it. Or adjust as needed.
   -- One dedicated LSP server & client will be started per unique root_dir
-  root_dir = require('jdtls.setup').find_root({'.project', 'mvnw', 'pom.xml', 'build.gradle' }),
+  root_dir = require('jdtls.setup').find_root({ '.project', 'mvnw', 'pom.xml', 'build.gradle' }),
   -- Here you can configure eclipse.jdt.ls specific settings
   -- See https://github.com/eclipse/eclipse.jdt.ls/wiki/Running-the-JAVA-LS-server-from-the-command-line#initialize-request
   settings = {
@@ -159,8 +159,9 @@ config['on_attach'] = function(client, bufnr)
   nmap('<leader>wl', function()
     print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
   end, '[W]orkspace [L]ist Folders')
+  vim.keymap.set('v', '<leader>c', vim.lsp.buf.code_action, { buffer = bufnr, desc = 'Action' })
 
-  jdtls.setup_dap({ hotcodereplace = 'auto' })
+  jdtls.setup_dap({ hotcodereplace = 'auto', config_overrides = {} })
   require('jdtls.dap').setup_dap_main_class_configs()
 end
 
