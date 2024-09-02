@@ -317,3 +317,5 @@ bindsym XF86_AudioNext exec --no-startup-id mpc next
 bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
 
+# Rofi Calculator
+bindsym $mod+c exec --no-startup-id "rofi -show calc -modi calc -no-show-match -no-sort > /dev/null"
