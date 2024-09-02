@@ -35,6 +35,7 @@ alias sync-photos="pull-android-sync storage/dcim/Camera Files/Pictures/"
 alias utube='ytfzf -t'
 alias yt-music='yt-dlp -x --embed-thumbnail --audio-format mp3'
 alias watch-cpu='watch cat /sys/devices/system/cpu/cpu[0-9]*/cpufreq/scaling_cur_freq'
+alias mvn-new='mvn archetype:generate -DgroupId=com.jatin -DartifactId=my-app -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false'
 
 push-android-sync() {
     rsync -P -arv -e 'ssh -p 8022' $1 user@$3:$2
