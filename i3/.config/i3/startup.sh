@@ -12,8 +12,8 @@ xinput set-prop 'YSPRINGTECH USB OPTICAL MOUSE' 'libinput Accel Profile Enabled'
 xrandr --output eDP --set TearFree on
 
 #Secondary monitor
-xrandr --output HDMI-A-0 --auto --left-of eDP
-# xrandr --output --rate 75
+# xrandr --output HDMI-A-0 # xrandr --output --rate 75
+xrandr --output HDMI-A-0 --auto --left-of eDP --mode 1920x1080 --rate 75 --set TearFree on
 
 # Set wallpaper
 feh --bg-scale /home/jatin/.config/i3/wallpaper.jpg
