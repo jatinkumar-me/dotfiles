@@ -68,7 +68,7 @@ for_window [instance="floating"] move right 400
 for_window [instance="floating"] move down 280
 
 bindsym $mod+Return exec --no-startup-id alacritty
-bindsym $mod+Shift+Return exec --no-startup-id $HOME/.config/i3/same-directory-terminal.sh
+bindsym $mod+Shift+Return exec --no-startup-id /home/jatin/.config/i3/same-directory-terminal.sh
 bindsym $alt+Return exec --no-startup-id alacritty --config-file=/home/jatin/.config/alacritty/alacritty2.yml --class floating
 bindsym $mod+v+Return split v && exec alacritty
 bindsym $mod+b+Return split h && exec alacritty
