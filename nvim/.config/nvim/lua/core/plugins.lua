@@ -141,6 +141,7 @@ require('lazy').setup({
   "leoluz/nvim-dap-go",
   "mxsdev/nvim-dap-vscode-js",
   "nvim-neotest/nvim-nio",
+  "microsoft/vscode-js-debug",
 
   -- REST Client
   'https://github.com/diepm/vim-rest-console.git',
