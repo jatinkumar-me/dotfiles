@@ -59,7 +59,7 @@ require('lazy').setup({
   },
 
   -- Useful plugin to show you pending keybinds.
-  { 'folke/which-key.nvim',          opts = {} },
+  { 'folke/which-key.nvim',  opts = {} },
   {
     -- Adds git releated signs to the gutter, as well as utilities for managing changes
     'lewis6991/gitsigns.nvim',
@@ -101,7 +101,7 @@ require('lazy').setup({
   },
 
   -- "gc" to comment visual regions/lines
-  { 'numToStr/Comment.nvim',         opts = {} },
+  { 'numToStr/Comment.nvim', opts = {} },
 
   { 'folke/todo-comments.nvim', opts = {} },
 
@@ -140,6 +140,7 @@ require('lazy').setup({
   "theHamsta/nvim-dap-virtual-text",
   "leoluz/nvim-dap-go",
   "mxsdev/nvim-dap-vscode-js",
+  "nvim-neotest/nvim-nio",
 
   -- REST Client
   'https://github.com/diepm/vim-rest-console.git',
