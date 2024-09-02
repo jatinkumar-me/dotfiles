@@ -132,7 +132,7 @@ require('lazy').setup({
   },
 
   -- Highlight, current variable
-  '/RRethy/vim-illuminate',
+  'RRethy/vim-illuminate',
 
   -- Debugging
   'mfussenegger/nvim-dap',
