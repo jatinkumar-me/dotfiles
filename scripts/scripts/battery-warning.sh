@@ -1,5 +1,8 @@
 #!/bin/bash
 
+export DISPLAY=:0
+export DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/$(id -u)/bus
+
 battery_stat="$(acpi --battery)"
 battery_greped_status="$(echo $battery_stat | grep -Pio 'remaining|charged')"
 battery_percentage_v="$(echo $battery_stat | grep -Po '(\d+%)' | grep -Po '\d+')"
