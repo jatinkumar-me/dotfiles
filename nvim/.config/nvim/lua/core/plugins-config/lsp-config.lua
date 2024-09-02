@@ -80,7 +80,8 @@ local servers = {
       telemetry = { enable = false },
     },
   },
-  texlab = {},
+  emmet_language_server = {}
+  -- texlab = {},
 }
 
 -- Setup neovim lua configuration
