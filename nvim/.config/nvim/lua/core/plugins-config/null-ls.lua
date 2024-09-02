@@ -6,8 +6,8 @@ null_ls.setup({
     -- javascript/typescript
     -- null_ls.builtins.formatting.prettier,
     -- null_ls.builtins.diagnostics.eslint,
-    null_ls.builtins.diagnostics.vale,
-    null_ls.builtins.formatting.eslint,
+    -- null_ls.builtins.diagnostics.vale,
+    -- null_ls.builtins.formatting.eslint,
     -- golang
     null_ls.builtins.formatting.gofumpt,
     null_ls.builtins.formatting.goimports_reviser,
