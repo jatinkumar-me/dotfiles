@@ -7,6 +7,8 @@ redshift -P -O 3400
 xinput disable 'Elan Touchpad'
 xinput set-prop 'YSPRINGTECH USB OPTICAL MOUSE' 'libinput Accel Speed' 0.0
 xinput set-prop 'YSPRINGTECH USB OPTICAL MOUSE' 'libinput Accel Profile Enabled' 0, 1
+xinput set-prop 'YICHIP Wireless Device Mouse' 'libinput Accel Speed' 0.0
+xinput set-prop 'YICHIP Wireless Device Mouse' 'libinput Accel Profile Enabled' 0, 1
 
 # Fixing screen tear
 xrandr --output eDP --set TearFree on
