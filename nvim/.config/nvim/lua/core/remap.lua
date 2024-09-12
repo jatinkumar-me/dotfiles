@@ -72,7 +72,7 @@ HandleURL = function()
 end
 
 -- vim.keymap.set({ "n", "v" }, "gx", [[:!xdg-open <C-r><C-a><CR>]], { desc = "Open the link the browser" })
-vim.keymap.set("n", "gx", [[<Cmd>lua HandleURL()<CR>]], { desc = "Open the link the browser" })
+-- vim.keymap.set("n", "gx", [[<Cmd>lua HandleURL()<CR>]], { desc = "Open the link the browser" })
 
 -- Jump between buffers
 vim.keymap.set('n', 'th', [[<Cmd>bprev<CR>]], { desc = "Jump to previous buffer" })
