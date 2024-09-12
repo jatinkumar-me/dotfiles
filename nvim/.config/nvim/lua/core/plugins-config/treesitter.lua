@@ -23,6 +23,7 @@ require('nvim-treesitter.configs').setup {
   tree_docs = {
     enable = true,
     keymaps = {
+      edit_doc_at_cursor = 'tgd',
       doc_node_at_cursor = 'tdd',
       doc_all_in_range = 'tdr',
     }

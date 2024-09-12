@@ -14,6 +14,7 @@ null_ls.setup({
     null_ls.builtins.formatting.golines,
     null_ls.builtins.formatting.latexindent,
     null_ls.builtins.formatting.beautysh,
+    null_ls.builtins.formatting.asmfmt,
   },
   --[[ on_attach = function(client, bufnr)
     if client.supports_method("textDocument/formatting") then
