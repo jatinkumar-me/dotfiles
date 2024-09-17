@@ -144,7 +144,7 @@ require('lazy').setup({
   "microsoft/vscode-js-debug",
 
   -- REST Client
-  'https://github.com/diepm/vim-rest-console.git',
+  "rest-nvim/rest.nvim",
 
   -- GIT Blame plugin
   'https://github.com/f-person/git-blame.nvim.git'
