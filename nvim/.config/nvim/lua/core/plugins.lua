@@ -61,6 +61,9 @@ require('lazy').setup({
   -- Github Copilot
   'github/copilot.vim',
 
+  -- Github Copilot Chat
+  'CopilotC-Nvim/CopilotChat.nvim',
+
   -- Useful plugin to show you pending keybinds.
   { 'folke/which-key.nvim',  opts = {} },
   {
