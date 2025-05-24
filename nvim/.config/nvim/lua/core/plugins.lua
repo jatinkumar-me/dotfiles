@@ -49,7 +49,7 @@ require('lazy').setup({
   'WhoIsSethDaniel/mason-tool-installer.nvim',
 
   -- null-ls
-  'jose-elias-alvarez/null-ls.nvim',
+  -- 'jose-elias-alvarez/null-ls.nvim',
   'mfussenegger/nvim-jdtls',
 
   {
@@ -65,7 +65,7 @@ require('lazy').setup({
   'CopilotC-Nvim/CopilotChat.nvim',
 
   -- Useful plugin to show you pending keybinds.
-  { 'folke/which-key.nvim',  opts = {} },
+  { 'folke/which-key.nvim',          opts = {} },
   {
     -- Adds git releated signs to the gutter, as well as utilities for managing changes
     'lewis6991/gitsigns.nvim',
@@ -107,9 +107,9 @@ require('lazy').setup({
   },
 
   -- "gc" to comment visual regions/lines
-  { 'numToStr/Comment.nvim', opts = {} },
+  { 'numToStr/Comment.nvim',         opts = {} },
 
-  { 'folke/todo-comments.nvim', opts = {} },
+  { 'folke/todo-comments.nvim',      opts = {} },
 
   -- Fuzzy Finder (files, lsp, etc)
   { 'nvim-telescope/telescope.nvim', version = '*', dependencies = { 'nvim-lua/plenary.nvim' } },
@@ -150,7 +150,16 @@ require('lazy').setup({
   "microsoft/vscode-js-debug",
 
   -- REST Client
-  "rest-nvim/rest.nvim",
+  {
+    "rest-nvim/rest.nvim",
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter",
+      opts = function(_, opts)
+        opts.ensure_installed = opts.ensure_installed or {}
+        table.insert(opts.ensure_installed, "http")
+      end,
+    }
+  },
 
   -- GIT Blame plugin
   'https://github.com/f-person/git-blame.nvim.git'

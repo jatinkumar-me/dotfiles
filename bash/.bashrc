@@ -33,7 +33,7 @@ alias blue="bluetoothctl connect E8:07:BF:89:A5:97"
 alias remote-android="ssh -p 8022 user@192.168.38.207"
 alias sync-photos="pull-android-sync storage/dcim/Camera Files/Pictures/"
 alias utube='ytfzf -t'
-alias yt-music='yt-dlp -x --embed-thumbnail --audio-format mp3'
+alias yt-music='yt-dlp -x --embed-thumbnail --audio-format mp3 -f bestaudio'
 alias watch-cpu='watch cat /sys/devices/system/cpu/cpu[0-9]*/cpufreq/scaling_cur_freq'
 alias mvn-new='mvn archetype:generate -DgroupId=com.jatin -DartifactId=my-app -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false'
 alias camera='mpv av://v4l2:/dev/video0 --profile=low-latency --untimed'
@@ -112,3 +112,6 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 
 # Load Angular CLI autocompletion.
 source <(ng completion script)
+
+# X-display server
+export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0

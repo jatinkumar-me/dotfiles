@@ -14,4 +14,4 @@ export PATH="$PATH:$HOME/.local/bin"
 
 export PATH="$PATH:$HOME/.cargo/bin"
 
-export JAVA_HOME=/usr/lib/jvm/java-17-openjdk
+export JAVA_HOME=/usr/lib/jvm/java-24-openjdk
