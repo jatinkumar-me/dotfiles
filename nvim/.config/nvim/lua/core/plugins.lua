@@ -150,7 +150,16 @@ require('lazy').setup({
   "microsoft/vscode-js-debug",
 
   -- REST Client
-  "rest-nvim/rest.nvim",
+  {
+    "rest-nvim/rest.nvim",
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter",
+      opts = function(_, opts)
+        opts.ensure_installed = opts.ensure_installed or {}
+        table.insert(opts.ensure_installed, "http")
+      end,
+    }
+  },
 
   -- GIT Blame plugin
   'https://github.com/f-person/git-blame.nvim.git'
