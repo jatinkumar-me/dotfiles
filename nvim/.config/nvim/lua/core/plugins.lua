@@ -49,7 +49,7 @@ require('lazy').setup({
   'WhoIsSethDaniel/mason-tool-installer.nvim',
 
   -- null-ls
-  'jose-elias-alvarez/null-ls.nvim',
+  -- 'jose-elias-alvarez/null-ls.nvim',
   'mfussenegger/nvim-jdtls',
 
   {
