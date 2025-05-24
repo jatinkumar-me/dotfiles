@@ -112,3 +112,6 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 
 # Load Angular CLI autocompletion.
 source <(ng completion script)
+
+# X-display server
+export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
