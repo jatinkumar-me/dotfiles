@@ -71,13 +71,6 @@ dap.listeners.after.event_initialized['dapui_config'] = function()
   dapui.open()
 end
 
--- dap.listeners.before.event_terminated['dapui_config'] = function()
---   dapui.close()
--- end
--- dap.listeners.before.event_exited['dapui_config'] = function()
---   dapui.close()
--- end
-
 -- Keymap
 local buf_map = function(mode, lhs, rhs, opts)
   vim.api.nvim_set_keymap(mode, lhs, rhs, opts or {
@@ -102,22 +95,3 @@ buf_map('n', '<Leader>dw]', ':lua require(\'dapui\').toggle(2)<CR>')
 -- DAP Config
 require('core.plugins-config.dap-languages.typescript')
 require('core.plugins-config.dap-languages.go')
-
--- -- DAP `launch.json`
--- require('dap.ext.vscode').load_launchjs(nil, {
---   ['pwa-node'] = {
---     'javascript',
---     'typescript',
---   },
---   ['node'] = {
---     'javascript',
---     'typescript',
---   },
---   ['cppdbg'] = {
---     'c',
---     'cpp',
---   },
---   ['dlv'] = {
---     'go',
---   },
--- })

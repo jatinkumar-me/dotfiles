@@ -62,6 +62,14 @@ for _, language in ipairs(languages) do
     {
       type = 'pwa-node',
       request = 'launch',
+      name = 'Launch Current File (pwa-node with bun)',
+      cwd = vim.fn.getcwd(),
+      runtimeArgs = { '--inspect-brk', '${file}' },
+      runtimeExecutable = 'bun',
+    },
+    {
+      type = 'pwa-node',
+      request = 'launch',
       name = 'Launch Test Current File (pwa-node with jest)',
       cwd = vim.fn.getcwd(),
       runtimeArgs = { '${workspaceFolder}/node_modules/.bin/jest' },
